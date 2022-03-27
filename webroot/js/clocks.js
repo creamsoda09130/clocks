@@ -10,7 +10,7 @@ const clock = () => {
   let date = d.getDate();
   // 曜日を取得
   let dayNum = d.getDay();
-  const weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  const weekday = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
   let day = weekday[dayNum];
   // 時を取得
   let hour = d.getHours();
@@ -20,19 +20,25 @@ const clock = () => {
   let sec = d.getSeconds();
 
   // 1桁の場合は0を足して2桁に
-  month = month < 10 ? "0" + month : month;
-  date = date < 10 ? "0" + date : date;
-  hour = hour < 10 ? "0" + hour : hour;
-  min = min < 10 ? "0" + min : min;
-  sec = sec < 10 ? "0" + sec : sec;
+  month = month < 10 ? '0' + month : month.toString();
+  date = date < 10 ? '0' + date : date.toString();
+  hour = hour < 10 ? '0' + hour : hour.toString();
+  min = min < 10 ? '0' + min : min.toString();
+  sec = sec < 10 ? '0' + sec : sec.toString();
 
   // 日付・時刻の文字列を作成
   let today = `${year}.${month}.${date} ${day}`;
   let time = `${hour}:${min}:${sec}`;
 
   // 文字列を出力
-  document.querySelector(".clock-date").innerText = today;
-  document.querySelector(".clock-time").innerText = time;
+  document.querySelector('.clock-date').innerText = today;
+  document.querySelector('.clock-time').innerText = time;
+
+  // 時間によって背景のクラスを追加
+  background = document.querySelector('.container');
+  if (05 <= Number(hour) <= 23) {
+    background.classList.add('hour' + hour);
+  }
 };
 
 // 1秒ごとにclock関数を呼び出す

@@ -12,12 +12,92 @@ body {
 .container {
   width: 100%;
   height: 100vh;
-  background-color: #f7f2f4;
+  background: linear-gradient(#04060c, #04060c);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+
 }
+
+/* 背景色の設定 */
+
+.hour05 {
+  background: linear-gradient(#04060c, #162646);
+}
+
+.hour06 {
+  background: linear-gradient(#162646, #264177);
+}
+
+.hour07 {
+  background: linear-gradient(#162646, #3F3455);
+}
+
+.hour08 {
+  background: linear-gradient(#162646, #68999C);
+}
+
+.hour09 {
+  background: linear-gradient(#162646, #F3E293);
+}
+
+.hour10 {
+  background: linear-gradient(#68999C, #F3E293);
+}
+
+.hour11 {
+  background: linear-gradient(#68999C, 20%, #F3E293, 60%, #d7fdff);
+}
+
+.hour12 {
+  background: linear-gradient(#F3E293, #d7fdff);
+}
+
+.hour13 {
+  background: linear-gradient(#F3E293, 25%, #d7fdff);
+}
+
+.hour14 {
+  background: linear-gradient(#d7fdff, #d7fdff);
+}
+
+.hour15 {
+  background: linear-gradient(#d7fdff, #F3E293);
+}
+
+.hour16 {
+  background: linear-gradient(#d7fdff, #fdaebd);
+}
+
+.hour17 {
+  background: linear-gradient(#825FB4, #fdaebd);
+}
+
+.hour18 {
+  background: linear-gradient(#264177, #fdaebd);
+}
+
+.hour19 {
+  background: linear-gradient(#264177, #3F3455);
+}
+
+.hour20 {
+  background: linear-gradient(#264177, #162646);
+}
+
+.hour21 {
+  background: linear-gradient(#162646, #3F3455);
+}
+
+.hour22 {
+  background: linear-gradient(#162646, #04060c);
+}
+
+.hour23 {
+  background: linear-gradient(#162646, 25%, #04060c);
+}
+
 
 /* 時計の共通スタイル */
 .clock {
@@ -27,11 +107,14 @@ body {
   line-height: 1.2;
   text-align: center;
   font-family: 'Orbitron', sans-serif;
+  -webkit-text-stroke: 3px #64473a;
+  color: #fff;
 }
 
 /* 日付のスタイル */
 .clock-date {
   font-size: 50px;
+  -webkit-text-stroke-width: 2px;
 }
 
 /* 時間のスタイル */
